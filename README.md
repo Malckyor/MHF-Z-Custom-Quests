@@ -36,6 +36,12 @@ Just at the right of the players amount there is the value for the quest tab 1C 
 12 01 = LR/HR Event Tab
 ![image](https://user-images.githubusercontent.com/68492734/160055723-06a2e373-d750-4f28-95d5-b249b5376abf.png)
 
+This isolated value is the “mark” on the quest.
+00 = None
+01 = Recommended
+02 = New
+![image](https://user-images.githubusercontent.com/68492734/160252302-063e5a0b-1a68-4cca-a85f-aa8b0131947b.png)
+
 Don’t touch this value, it seems to be unique for each quest, this disables all other quests.
 ![image](https://user-images.githubusercontent.com/68492734/160055749-e1baa38c-41ff-4638-a7e4-3022b0a7debb.png)
 
@@ -105,6 +111,12 @@ Values for the waist piece.
 ![image](https://user-images.githubusercontent.com/68492734/160056368-b1dc73a9-8ce3-4637-b5b5-5c196a9d1bb6.png)
 And the decos.
 ![image](https://user-images.githubusercontent.com/68492734/160056392-84abc436-f315-419c-8bf8-7b3239a41318.png)
+
+This single value is the “mode” 0C = Unlimited (UL), if you add this the quest will become GR.
+04 = Hardcore (HC)
+06 = Forced HC
+0B = Forced GHC
+![image](https://user-images.githubusercontent.com/68492734/160252356-41ce947c-00ae-46bc-a6da-98f9ba7798f4.png)
 
 This is the main GRP value showed ingame, it’s also inverted “84 03 00 00” to hex 00 00 03 84 = dec 900. Somehow it supports a HUGE amount of points… The following values in orange follows the same pattern as they are for SubA and SubB.
 ![image](https://user-images.githubusercontent.com/68492734/160056417-4d48cb64-f1f1-4caa-82f2-93c988d53ac2.png)
