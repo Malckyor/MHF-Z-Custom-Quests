@@ -19,7 +19,6 @@ This is a repo for my MHFZ custom quests.
 Since I know that many of you want to have your own custom quests and even that beauty looking info in the quest counter, so I'm sharing my notes and hope it helps those who are interested in this. Just be warned that I couldn't spend much time here to find everything so there are a few missing things, if you happen to know and want to share it, you're free to share it as an issue or whatever. Be warned that this is basically a copy/paste of my notes, this is not exactly a step-by-step or whatever kind of tutorial, just sharing some info here. Also you can even add more quests to those files, I just didn't take the time to look for that so for now I don't know how to add more, but I assume that the limit is 42 per file, which means that the only one that is not "full" is the quest_168_A8.bin file. Also for some reason you cannot use more than 5 questlists files at the same time in the database, maybe it could be possible with a proper code?
 
 **What do you need?**
-
 Just a hex editor to do that.
 
 All tests were made using the “quest_0_0.bin” which is a questlist for events.
