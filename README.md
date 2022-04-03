@@ -3,7 +3,7 @@ This is a repo for my MHFZ custom quests.
 
 ## How to use them
 * Download both the quests and the questlists file.
-* Import the questlists to your questlists in pgAdmin.
+* Import the questlists to your questlists in pgAdmin. (Read below on how to do that)
 * Keep the questlists file inside the questlists folder inside your server bin folder.
 * Extract the quests inside your quests folder, they have unique ID and will not overwrite any of the official quests.
 * Just play and have fun!
@@ -14,6 +14,33 @@ This is a repo for my MHFZ custom quests.
 **Freezing Hell** is another musou-type quest that I made to face Teo Tesukatora and Toa Tesukatora together, it's a quick and lethal quest though!
 
 **Old Demon's Memories** is an HR100+ quest that I alongside my old friend Matahashi tried to make to recreate an old quest that was available in the Korean servers back them, I forgot to add the "Top Wing" as a reward, but this is the only way to get the worth Premium HR armours, but the quest is very tough and restricted!
+
+## How to import questlists to pgAdmin by MAEL
+1. Paste Malck quests into Erupe>Bin>Questlists
+(All files the ones that begin like **list_** and **quest_**
+
+2. Open pgAdmin4, navigate through databases>erupe>schemas>tables
+
+3. Right click questlists table and select Scripts > (any scripts because you will paste mine, but if you are scared use INSERT)
+
+4. Copy and paste this query and change parameters ill mark as **bold**
+
+```
+INSERT INTO public.questlists (ind, questlist) VALUES ('0', pg_read_binary_file('YourPathToErupe\Erupe\bin\questlists\quest_0_0.bin'));
+INSERT INTO public.questlists (ind, questlist) VALUES ('42', pg_read_binary_file('YourPathToErupe\Erupe\bin\questlists\quest_42_2A.bin'));
+INSERT INTO public.questlists (ind, questlist) VALUES ('84', pg_read_binary_file('YourPathToErupe\Erupe\bin\questlists\quest_84_54.bin'));
+INSERT INTO public.questlists (ind, questlist) VALUES ('126', pg_read_binary_file('YourPathToErupe\Erupe\bin\questlists\quest_126_7E.bin'));
+INSERT INTO public.questlists (ind, questlist) VALUES ('168', pg_read_binary_file('YourPathToErupe\Erupe\bin\questlists\quest_168_A8.bin'));
+```
+
+**path** is your full path to Erupe\Bin folder (copy it from windows exporer top bar. And yes you absolutely must use **\** and not **/**.
+
+Example path will look like this:
+C:\Erupe\bin\questlists\quest_0_0.bin
+
+5. Click Run/Execute (little play button in top right) or press F5.
+
+6. Press right on questlist>view data>all rows. Make sure you have 5 entries and second column has [binary data] type not [null]
 
 ## How to make your own questlists
 Since I know that many of you want to have your own custom quests and even that beauty looking info in the quest counter, so I'm sharing my notes and hope it helps those who are interested in this. Just be warned that I couldn't spend much time here to find everything so there are a few missing things, if you happen to know and want to share it, you're free to share it as an issue or whatever. Be warned that this is basically a copy/paste of my notes, this is not exactly a step-by-step or whatever kind of tutorial, just sharing some info here. Also you can even add more quests to those files, I just didn't take the time to look for that so for now I don't know how to add more, but I assume that the limit is 42 per file, which means that the only one that is not "full" is the quest_168_A8.bin file. Also for some reason you cannot use more than 5 questlists files at the same time in the database, maybe it could be possible with a proper code?
