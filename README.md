@@ -33,10 +33,10 @@ INSERT INTO public.questlists (ind, questlist) VALUES ('126', pg_read_binary_fil
 INSERT INTO public.questlists (ind, questlist) VALUES ('168', pg_read_binary_file('YourPathToErupe\Erupe\bin\questlists\quest_168_A8.bin'));
 ```
 
-**path** is your full path to Erupe\Bin folder (copy it from windows exporer top bar. And yes you absolutely must use **\** and not **/**.
+  **path** is your full path to Erupe\Bin folder (copy it from windows exporer top bar. And yes you absolutely must use \ and not / .
 
-Example path will look like this:
-C:\Erupe\bin\questlists\quest_0_0.bin
+  Example path will look like this:
+  C:\Erupe\bin\questlists\quest_0_0.bin
 
 5. Click Run/Execute (little play button in top right) or press F5.
 
